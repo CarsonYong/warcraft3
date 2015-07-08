@@ -13,7 +13,7 @@ describe Barracks do
 
     it "costs 135 gold" do
       @barracks.train_footman
-      expect(@barracks.gold).to eq(865) # starts at 1000
+      expect(@barracks.gold_amount).to eq(865) # starts at 1000
     end
 
     it "costs 2 food" do
