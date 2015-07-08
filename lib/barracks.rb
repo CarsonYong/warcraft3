@@ -1,4 +1,5 @@
 require_relative 'footman'
+require_relative 'peasant'
 
 class Barracks
 
@@ -35,4 +36,23 @@ class Barracks
       return false
    end 
   end
+
+  def train_peasant
+    if can_train_peasant?  
+    @gold -= 90
+    @food -=5
+    Peasant.new
+
+    end
+  end
+  def can_train_peasant?
+      if gold >= 90 && food >= 5
+        true
+     else 
+       puts "You don't have enough resources "
+      nil
+    end
+
+  end
+
 end
