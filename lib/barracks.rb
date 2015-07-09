@@ -1,7 +1,8 @@
 require_relative 'footman'
 require_relative 'peasant'
+require_relative 'building'
 
-class Barracks
+class Barracks < Building
 
   attr_accessor :gold, :food
 
